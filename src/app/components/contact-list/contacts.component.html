@@ -1,0 +1,14 @@
+<app-contact-form *ngIf="editOrAdd" [isEdit]="isEdit" [model]='contact' (addOrEdit)="addOrEditData($event)" (cancel)="editOrAdd =!editOrAdd"></app-contact-form>
+<!-- List -->
+<section *ngIf="!editOrAdd">
+  <div *ngFor="let contact of this.contacts">
+    <section *ngIf="!editOrAdd">
+      {{contact.firstName}}, {{contact.lastName}}, {{contact.email}}
+      <button class="btn"  (click)="editContact(contact)">Edit</button>
+  
+    </section>
+    
+  </div>
+  <button class="btn btn-success"  (click)="editContact()">Add Contact</button>
+</section>
+
