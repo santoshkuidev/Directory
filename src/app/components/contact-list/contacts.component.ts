@@ -35,11 +35,6 @@ export class ContactsComponent implements OnInit {
       this.isEdit = false;
     }
     this.contact = contact || {};
-    // console.log(contact)
-  }
-
-  addOrEditData(val){
-
   }
 
   cancelEdit(){

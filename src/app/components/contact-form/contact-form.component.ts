@@ -14,7 +14,6 @@ export class ContactFormComponent implements OnInit {
     @Input() model;
     @Input() isEdit:boolean = false;
     @Output() cancel = new EventEmitter();
-    // model = <Contact> {};
     submitted = false;
     btnName = 'Submit';
 

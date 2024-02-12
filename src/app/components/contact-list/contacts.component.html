@@ -1,6 +1,6 @@
-<app-contact-form *ngIf="editOrAdd" [isEdit]="isEdit" [model]='contact' (addOrEdit)="addOrEditData($event)" (cancel)="editOrAdd =!editOrAdd"></app-contact-form>
+<app-contact-form *ngIf="editOrAdd" [isEdit]="isEdit" [model]='contact' (cancel)="editOrAdd =!editOrAdd"></app-contact-form>
 <!-- List -->
-<section *ngIf="!editOrAdd">
+<section *ngIf="!editOrAdd" class="center">
   <div *ngFor="let contact of this.contacts">
     <section *ngIf="!editOrAdd">
       {{contact.firstName}}, {{contact.lastName}}, {{contact.email}}
